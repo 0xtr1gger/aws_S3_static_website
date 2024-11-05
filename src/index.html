@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Colorful Web Page</title>
+    <title>Just a page</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Raleway', sans-serif;
+            font-family: sans-serif;
+            font-weight: 500;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f06, #ffdd00);
+            background: linear-gradient(135deg,#f06, #ffdd00);
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -28,19 +29,43 @@
         p {
             font-size: 1.5rem;
             margin: 0 0 30px 0;
+            
+        }
+
+        .description {
+            width: 800px;
+            
+            
+            .tech-list {
+                color: rgba(255, 255, 255, 0.7);
+                text-align: left;
+            }
+
+            .tech {
+                color: white;
+            }
+
+        }
+
+        .tech-title .tech-list {
+            text-align: left;
         }
 
         a {
+            width: 300px;
+            color: white;
+            display: inline-block;
             text-decoration: none;
-            color: #fff;
-            background-color: #4a90e2;
-            padding: 15px 30px;
+            border: 2px solid white;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            margin: 10px 0;
+            padding: 10px 15px;
+            transition: all 0.3s, color 0.3s; 
         }
 
         a:hover {
-            background-color: #357ab8;
+            border-color: #FF5733;
+            color: #FF5733; 
         }
 
         footer {
@@ -52,9 +77,21 @@
 </head>
 <body>
 
-    <h1>Welcome to My Page!</h1>
+    <h1>Welcome to Just a Page!</h1>
+    <div class="description">
+        <p>This static website has been created as a portfolio project and deployed on an AWS S3 bucket to showcase my skills working with cloud, infrastructure automation, and CI/CD.</p>
+        <p class="tech-title">Technologies Used:</p>
+    <ul class="tech-list">
+        <li><span class="tech">Amazon Web Services (AWS)</span>: AWS S3 bucket is used as a cloud-based hosting solution.</li>
+        <li><span class="tech">Terraform</span>: Terraform has been used for the creation of the S3 bucket and deployment of the website as a cloud infrastructure provisioning automation tool.</li>
+        <li><span class="tech">GitHub Actions</span>: GitHub Actions workflow has been set up for the repository to automate CI/CD pipeline responsible for deploying any changes made to the website to this bucket automatically.</li>
+        <li><span class="tech">GitHub Secrets</span>: GitHub Secrets has been used as a secure storage for AWS access keys that Terraform uses to provision the infrastructure.</li>
+        <li><span class="tech">HTML/CSS</span>: This is just how this Just a Page has been written.</li>
+    </ul>
+    </div>
     <p>Just a page. Nothing more.</p>
-    <a href="https://github.com/0xtr1gger">And here is by GitHub, btw.</a>
+    <a href="https://github.com/0xtr1gger/aws_S3_static_website/">Btw, here is the repository of this project.</a>
+    <a href="https://github.com/0xtr1gger">And here is my GitHub.</a>
 
     <footer>
         &copy; 2024 Really, just a page
