@@ -71,4 +71,5 @@ resource "aws_s3_object" "upload_files" {
 	source = "${path.module}/../src/${each.value}"
 
 	content_type = "text/html"
+
 }
